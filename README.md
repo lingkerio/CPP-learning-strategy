@@ -1,1 +1,1 @@
-# C-learning-strategy
+# C++-learning-strategy
