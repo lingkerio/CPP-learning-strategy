@@ -1,4 +1,5 @@
 ## 初识C++
+[TOC]
 ```cpp
 #include <iostream>
 using namespace std;

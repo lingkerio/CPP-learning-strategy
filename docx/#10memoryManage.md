@@ -1,6 +1,5 @@
-[toc]
 # 内存管理
-
+[TOC]
 ## keyword 
 
 ### storage class specifier
