@@ -1,12 +1,16 @@
 # 函数探幽
+
 [TOC]
+
 ## 内联函数
+
 1. 以空间换时间
 2. 函数声明或者定义需要使用关键字**_inline_**
 3. 通常省略原型，将整个定义放在本应使用原型的地方
 4. 内联函数不允许递归
 5. 有些编译器可能因为函数过大或函数使用了递归而不将其作为内联函数
 6. 函数定义占用多行的函数作为内联函数就不太合适
+
 ## 引用变量
 
 1. 创建引用变量：typeName & reference = initializer;  // intializer is necessary
@@ -32,18 +36,21 @@
       - 数组，指针
       - 结构，引用或指针
       - 类对象，引用
+
 ## 默认参数
 
 1. 默认参数指当函数调用时省略了实参时自动使用的一个值
 2. 设置默认值
+
 ```cpp
 //for instance
 char* left(const char * str, int n = 1);
 ```
 
-3. 若有默认参数的形参对应的实参没有被省略，则实参会覆盖默认参数
-4. 如果要为一个参数设置默认值，必须要为它右边的所有参数都设置默认值
-5. 实参按从左到右的顺序赋值给形参，而不能跳过任何参数
+1. 若有默认参数的形参对应的实参没有被省略，则实参会覆盖默认参数
+2. 如果要为一个参数设置默认值，必须要为它右边的所有参数都设置默认值
+3. 实参按从左到右的顺序赋值给形参，而不能跳过任何参数
+
 ## 函数重载
 
 1. C++允许定义同名函数，条件是函数特征标（function signature）不同
@@ -53,8 +60,11 @@ char* left(const char * str, int n = 1);
 5. 函数调用如果和多个原型匹配，将自动调用最合适的版本
 6. 仅当函数基本上执行相同的任务但是用不同形式的数据时，才应该采用函数重载
 7. 有时也可以通过默认参数起到函数重载的效果但比重载更简洁
+
 ### 函数模板
+
 basic syntax:
+
 ```cpp
 template <typename user_definite_name>//typename can be replaced by class
 function prototype;
@@ -62,14 +72,17 @@ function prototype;
 template <typename user_definite_name>//typename can be replaced by class
 function definition;
 ```
+
 #### 具体化（specialization）
+
 ##### 实例化
 
 1. 显式实例化（explicit instantiation）
-   - syntax:template return_type function_name<type> (parameter list);
+   - syntax:template return_type function_name<type_> (parameter list);
    - 指明要实例化一个这样特定type的函数
 2. 隐式实例化
    - 调用函数时根据参数类型自动实例
+
 ##### 显式具体化（explicit specialization）
 
 - syntax:template <> return_type function_name<parameter_type>(parameter list);
@@ -89,8 +102,9 @@ function definition;
    3. 标准转换（整型变为字符型，整型变为浮点型）
    4. 用户定义的转换
 4. 创建自定义函数选择：
+
 - function<>(parameter list);//template function
-- function<type>(parameter list);//explicit instantiation
+- function<type_>(parameter list);//explicit instantiation
 
 ### 模板函数的发展
 
