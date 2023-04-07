@@ -149,12 +149,13 @@ template <typename T>
 
 ### using
 
-#### using改变重新定义访问权限
+#### using重新定义访问权限
 
 在三种权限部分使用会获得对应的权限：using class::function/data;只能使用成员名，没有圆括号、函数特征标、返回类型
 
 #### 模板别名
 
+```cpp
 template\<typename T>
     using arrtype = std::array<T, 12>;
     arrtype\<int> days;//equal to std::array<int, 12>
@@ -164,3 +165,4 @@ using pc2 = const char*;
     typedef const int *[*pa1](10);
 using pa2 = const int*[*](10);
 }
+```
