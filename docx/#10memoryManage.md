@@ -13,10 +13,10 @@
 > 5. thread_local
 > 6. mutable
 >
-> > auto & register 已经不再具有存储说明符的作用
-> > static & extern 用于修饰静态 和 引用声明
-> > thread_local 为并发程序设计的内容
-> > mutable 表明即使 结构 or 类 被const修饰，其被mutable修饰的成员依然可以被修改
+> > auto & register 已经不再具有存储说明符的作用  
+> > static & extern 用于修饰静态 和 引用声明  
+> > thread_local 为并发程序设计的内容  
+> > mutable 表明即使 结构 or 类 被const修饰，其被mutable修饰的成员依然可以被修改  
 
 ### cv-qualifier
 >
